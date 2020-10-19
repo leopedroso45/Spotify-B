@@ -23,7 +23,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/index/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/home/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/index/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,10 +62,13 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/template/home" />
     <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/template/home" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/template/home" />
       <recent name="$PROJECT_DIR$/template" />
@@ -122,7 +127,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602986804892</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Authenticating with spotify, it's necessary to save the token.">
+      <created>1603002104923</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603002104923</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Authenticating with spotify, it's necessary to save the token.">
+      <created>1603002132821</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603002132821</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +163,8 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Start project" />
     <MESSAGE value="Adding oauth function." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding oauth function." />
+    <MESSAGE value="Authenticating with spotify, it's necessary to save the token." />
+    <option name="LAST_COMMIT_MESSAGE" value="Authenticating with spotify, it's necessary to save the token." />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -178,9 +198,9 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1602986703305" />
-    <state x="314" y="119" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1602986829379">
+    <state x="314" y="119" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1603002140725">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="314" y="119" width="800" height="563" key="Vcs.Push.Dialog.v2/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1602986829379" />
+    <state x="314" y="119" width="800" height="563" key="Vcs.Push.Dialog.v2/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1603002140725" />
   </component>
 </project>

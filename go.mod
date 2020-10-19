@@ -4,5 +4,6 @@ go 1.15
 
 require (
 	github.com/gorilla/mux v1.8.0
+	github.com/gorilla/sessions v1.2.1
 	github.com/zmb3/spotify v0.0.0-20200814173021-9bec46940cc0
 )
