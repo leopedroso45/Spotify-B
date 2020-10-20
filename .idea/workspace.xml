@@ -20,12 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f27d0cd-b729-4fe5-bf8c-40b6b137de5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/template/index/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template/index/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/index/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/index/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/index/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603147060694</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Auth fixed and finally we can get data from the user to create cards.">
+      <created>1603154645871</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1603154645871</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +177,8 @@
     <MESSAGE value="Adding oauth function." />
     <MESSAGE value="Authenticating with spotify, it's necessary to save the token." />
     <MESSAGE value="Trying to fix the auth sending token" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to fix the auth sending token" />
+    <MESSAGE value="Auth fixed and finally we can get data from the user to create cards." />
+    <option name="LAST_COMMIT_MESSAGE" value="Auth fixed and finally we can get data from the user to create cards." />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -206,9 +212,10 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1602986703305" />
-    <state x="314" y="119" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1603147063037">
-      <screen x="72" y="27" width="1294" height="741" />
+    <state x="1621" y="95" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1603154652096">
+      <screen x="1366" y="0" width="1366" height="768" />
     </state>
+    <state x="1621" y="95" key="Vcs.Push.Dialog.v2/72.27.1294.741/1366.0.1366.768@1366.0.1366.768" timestamp="1603154652096" />
     <state x="314" y="119" width="800" height="563" key="Vcs.Push.Dialog.v2/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1603147063037" />
   </component>
 </project>

@@ -80,11 +80,12 @@ func HandleCallback(w http.ResponseWriter, r *http.Request) {
 	}
 
 	limit := 50
+	timeRange := "long"
 	opt := &spotify.Options{
 		Country:   nil,
 		Limit:     &limit,
 		Offset:    nil,
-		Timerange: nil,
+		Timerange: &timeRange,
 	}
 	fullTPage, _ := client.CurrentUsersTopTracksOpt(opt)
 	trackList := fullTPage.Tracks
