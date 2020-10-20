@@ -1,6 +1,18 @@
 {{ define "title" }}Home | Login{{ end }}
 
 {{ define "content" }}
-    <h1>Welcome</h1>
-    <a href="/login">Spotify Log In</a>
+    <h1>Welcome {{.Name}}</h1>
+        {{ range .Client.User.Images }}
+            {{ if .URL}}
+                <img src="{{ .URL }}">
+            {{ else }}
+            {{ end }}
+        {{ end }}
+
+    <p>Região: {{ .Client.Country }} </p>
+    <p>Spotify: {{ .Client.Product }} </p>
+
+    {{ range .Music }}
+        {{ . }}<br/>
+    {{ end }}
 {{ end }}

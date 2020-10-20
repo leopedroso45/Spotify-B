@@ -1,0 +1,107 @@
+{{ define "title" }}Index | Login{{ end }}
+
+{{ define "content" }}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 color:blue;" style="text-align:center; margin:auto;"><h1>Welcome</h1></div>
+        </div>
+        <div class="row">
+
+            <div class="col-sm" style="background-color:red; text-align:center; margin:auto;">col-sm</div>
+            <div class="col-sm color:red;" style="text-align:center; margin:auto;"><a href="/login">Spotify Log In</a></div>
+            <div class="col-sm color:gray;" style="background-color:black; text-align:center; margin:auto;">col-sm</div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%</div>
+            </div>
+        </div>
+    </div>
+{{ end }}
+
+{{ define "card"}}
+    <style>
+        #card {
+            border: 10px solid #102B2B;
+            width: 20%;
+            height: 5%;
+            background: #52DBDD;
+            display: block;
+        }
+        #name {
+            text-align: center;
+            font-size: 90%;
+
+            border-radius: 15px;
+            border-top: 5px solid rgba(16,43,43,.17);
+            border-left: 5px solid rgba(16,43,43,.17);
+            border-right: 5px solid rgba(16,43,43,.17);
+            border-bottom: 5px solid rgba(16,43,43,.17);
+            margin: 10px 10px;
+            padding: 0%;
+        }
+        #level {
+            text-align: center;
+            color: black;
+            margin: 0% 10%;
+            font-size: 100%;
+        }
+        #pic {
+            margin: 1% 10%;
+        }
+
+        #pic img {
+            border: 8px solid #545F7C;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+
+        }
+        #pic img {
+            width: 98%;
+        }
+
+        #description {
+            margin: 2%;
+            background: #A1A1EB;
+            padding: 0.5%;
+            border: 3px solid #102B2B;
+            border-radius: 20px;
+        }
+        #description h2 {
+            font-size: 60%;
+            margin: 0;
+            text-align: center;
+        }
+        #description p {
+            font-size: 50%;
+            margin: 0;
+            text-align: center;
+        }
+
+        #stats {
+            margin-top: 5%;
+            border-top:2px solid #000;
+            text-align: center;
+            font-size: 70%;
+        }
+
+    </style>
+    <div id="card">
+        <div id="name">Moving On and Getting Over</div>
+        <div id="level">&#9733; &nbsp; &#9733; &nbsp; &#9733;</div>
+        <div id="pic">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/91N8H1emDeL._AC_SL1500_.jpg">
+        </div>
+        <div id="description">
+            <h2>[Rock/2017]</h2>
+            <p>
+                Compositores: John Clayton Mayer | Álbum: The Search for Everything: Wave One
+
+            <div id="stats">
+                AFFLA / 2500  &nbsp;  SUPPO / 1200
+            </div>
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+
+{{ end }}
