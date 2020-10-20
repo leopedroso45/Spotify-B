@@ -15,24 +15,25 @@ import (
 const redirectURI = "http://localhost:8080/callback"
 
 var (
-	auth = spotify.NewAuthenticator(redirectURI, spotify.ScopeUserReadPrivate)
-
+	auth = spotify.NewAuthenticator(redirectURI, spotify.ScopeUserReadPrivate, spotify.ScopeUserTopRead, spotify.ScopeUserLibraryRead)
 	//TODO: randomize it
 	state = "state"
 	store = sessions.NewCookieStore([]byte("mySession"))
 	m     = map[string]dataUser{}
+	url   = ""
 )
 
 type dataUser struct {
 	token  *oauth2.Token
 	state  string
-	client *spotify.PrivateUser
-	musics []string
+	Client spotify.PrivateUser
+	Music  []string
+	Name   string
 }
 
 func main() {
-	auth.SetAuthInfo("3f1e5d78deb5408aa01fb484acdae228", "f47df7a04a65404ab8b6972c8791aeaa")
-
+	auth.SetAuthInfo("", "")
+	url = auth.AuthURL(state)
 	router := mux.NewRouter()
 	router.HandleFunc("/", HandleIndex)
 	router.HandleFunc("/login", HandleLogin)
@@ -55,7 +56,7 @@ func HandleIndex(w http.ResponseWriter, r *http.Request) {
 }
 
 func HandleLogin(w http.ResponseWriter, r *http.Request) {
-	url := auth.AuthURL(state)
+
 	http.Redirect(w, r, url, http.StatusTemporaryRedirect)
 }
 
@@ -78,7 +79,7 @@ func HandleCallback(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 
-	limit := 10
+	limit := 50
 	opt := &spotify.Options{
 		Country:   nil,
 		Limit:     &limit,
@@ -87,9 +88,7 @@ func HandleCallback(w http.ResponseWriter, r *http.Request) {
 	}
 	fullTPage, _ := client.CurrentUsersTopTracksOpt(opt)
 	trackList := fullTPage.Tracks
-	musicName := []string{
-		" ",
-	}
+	var musicName []string
 	for _, x := range trackList {
 		musicName = append(musicName, x.Name)
 	}
@@ -97,15 +96,16 @@ func HandleCallback(w http.ResponseWriter, r *http.Request) {
 	sendData := dataUser{
 		token:  token,
 		state:  state,
-		client: user,
-		musics: musicName,
+		Client: *user,
+		Music:  musicName,
+		Name:   user.User.DisplayName,
 	}
 
-	m[sendData.client.User.DisplayName] = sendData
+	m[sendData.Client.User.DisplayName] = sendData
 
 	session, _ := store.Get(r, "mySession")
 
-	session.Values["name"] = sendData.client.User.DisplayName
+	session.Values["name"] = sendData.Client.User.DisplayName
 	session.Save(r, w)
 	//fmt.Fprintf(w, "Login Completed %s!\n <img src='%s'>", user.DisplayName, user)
 	http.Redirect(w, r, "/index", http.StatusSeeOther)
@@ -115,11 +115,8 @@ func HandleHome(w http.ResponseWriter, r *http.Request) {
 	session, _ := store.Get(r, "mySession")
 
 	name := session.Values["name"]
-	fmt.Println(state)
-	fmt.Println(name)
 
 	str := fmt.Sprintf("%v", name)
-	fmt.Println(str)
 
 	actual := m[str]
 	//update views
